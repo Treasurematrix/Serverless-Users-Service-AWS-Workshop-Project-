@@ -33,8 +33,7 @@ The service uses the classic **serverless synchronous pattern**:
 
 ```
 
-Client → API Gateway → Lambda → DynamoDB → Lambda → API Gateway → Client
-
+![Diagram](Diagram Serverless Users Service (AWS Workshop).png)
 ````
 
 ### **Components**
