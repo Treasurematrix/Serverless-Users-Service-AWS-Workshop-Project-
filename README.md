@@ -54,10 +54,14 @@ Client → API Gateway → Lambda → DynamoDB → Lambda → API Gateway → Cl
 - Partition key: `_id` (String)
 - Added items both manually and via Lambda
 
+  ![Screenshot](AWS Serverless Patterns Workshop Screenhots/DynamoDb table.png)
+
 ### ✔ Lambda functions
 - `first-function` – initial test function  
 - `m1-add-sample-data` – inserts demo users using `batch_writer()`  
 - `get-users` – retrieves all items from DynamoDB using `scan()`
+
+  ![Screenshot](AWS Serverless Patterns Workshop Screenhots/Screenshot (493).png)
 
 ### ✔ API Gateway REST API
 - Created a REST API named **ServerlessREST**
@@ -65,10 +69,14 @@ Client → API Gateway → Lambda → DynamoDB → Lambda → API Gateway → Cl
 - Integrated GET method with the `get-users` Lambda function
 - Deployed API to stage: `v1`
 
+  ![Screenshot](AWS Serverless Patterns Workshop Screenhots/Screenshot (495).png)
+
 ### ✔ IAM permissions
 - Lambda execution roles updated to allow:
   - `AmazonDynamoDBFullAccess` (for write function)
   - `AmazonDynamoDBReadOnlyAccess` (for read function)
+
+   ![Screenshot](AWS Serverless Patterns Workshop Screenhots/Screenshot (493).png)
 
 ---
 
